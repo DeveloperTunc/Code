@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+
+  <style>
+    .outer-layer{
+      border: 2px solid black;
+      width: 600px;
+      height: 800px;
+      margin:80px auto;
+      border-radius: 15px;
+      background-color: antiquewhite;
+    }
+    .calculation-layer{
+      margin: 15px auto;
+      border: 2px black solid;
+      height: 100px;  
+      width: 90%;
+      border-radius: 15px;
+      background-color: rgb(227, 243, 243);
+    }
+    #text-input{
+      margin: 20px 8px;
+      width: 95%;
+      height: 50px;
+      text-align: right;
+      font-size: x-large;
+      border-radius: 10px;
+
+
+    }
+    .buttons-layer{
+      border: 5px solid black;
+      width: 90%;
+      height: 75%;
+      margin: auto;
+      border-radius: 10px;
+      background-color: rgb(241, 221, 221);
+
+    }
+    button{
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      margin: 15px 25px;
+      font-size: x-large;
+      background-color: orange;
+      color: white;
+      
+
+
+    }
+    button:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in;
+      background-color: purple;
+
+}
+
+    #calculate-button{
+      width: 215px;
+    }
+
+    
+  </style>
+  
+ 
+  <div class="outer-layer">
+    <div class="calculation-layer">
+      <input type="text" id="text-input" readonly />
+    </div>
+    
+  <div class="buttons-layer">
+    <button>0</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>+</button>
+    <button>-</button>
+    <button>/</button>
+    <button>*</button>
+    <button id = "calculate-button">calculate</button>
+    <button>clear</button>
+  </div>
+  </div>
+ <script>
+  const textInput = document.getElementById('text-input');
+  const buttons = document.querySelectorAll('.buttons-layer button');
+  let expression ='';
+
+  buttons.forEach(button =>{
+    button.addEventListener('click', () =>{
+      const value = button.textContent;
+
+      if(value==='calculate'){
+        try{
+          expression = eval(expression).toString();
+        } catch(error){
+          expression = 'Error';
+        }
+      }else if (value === 'clear'){
+        expression = '';
+      }
+      
+      
+      else{
+        if (expression === '0' || expression === 'Error'){
+          expression = value;
+        }else{
+          expression += value;
+        }
+      }
+
+
+      textInput.value = expression;
+
+
+    });
+  });
+
+ </script>
+  
+</body>
+</html>

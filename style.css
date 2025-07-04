@@ -1,0 +1,84 @@
+/* 
+This file is where i will write styling to page.
+Html files provides the skeleton of webpages, CSS files are here to
+style that webpages like adjusting positioning colors, images.
+*/
+
+
+/* .h1 targets the h1 element in html file */
+/* In order to see this styling effect on hrml file i need to link this file
+to the relevant html file*/
+body{
+    background-image: url(istockphoto-586919488-2048x2048.jpg) ;
+    color: aliceblue;
+    
+}
+img{
+    opacity: 0.1;
+}
+.h1{ 
+text-align: center; /* aling the text to center of page */
+border: 1px black double; /* Set a border to see how element is affected by it.1 px black double */
+font-size: 55px; /* Adjusting font size  */
+margin-top: 50px; /* Push down h1 by 50 px */
+padding-top: 20px; /* Push My First Website from border top and bottom side by 20 px */
+padding-bottom: 20px; /* Push My First Website from border top and bottom side by 20 px */
+border-radius: 15px; /* Give the border rounded corners */
+background-image: url(istockphoto-468984534-2048x2048.jpg); /* An image i found on istockphoto.com Set it for background image for title */
+color: rgb(198, 219, 238); /*  Set the color of h1 */
+width: 100%;
+
+}
+h1:hover{ /* hovering effect provides additinal functionality when hovered on element */
+    color: purple;
+    
+    scale: 1.5;
+}
+.container-1{
+    border: 1px solid black;
+    width: 750px; 
+    margin: 10px auto;
+    background-color: rgb(23, 43, 18);
+    padding: 10px 40px;
+
+}
+
+.header-para{
+    font-size: 25px;
+    font-weight: bold; /* Set how bold will text look like */
+    text-align: center;
+}
+.container-2{
+    width: 1600px;
+    border: 10px solid black;
+    height: 900px;
+    margin: 30px auto;
+    background-color: rgb(86, 85, 87);
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    font-size: 30px;
+    justify-content: space-between;
+
+}
+.container-2-1{
+    border: 5px solid;
+    width: 750px;
+    padding: 10px 20px;
+
+}
+.container-2-1 > h2{
+    text-align: center;
+}
+
+.container-2-2{
+    border: 5px solid;
+    width: 750px;
+    padding: 10px 20px;
+    
+
+}
+.container-2-2 > h2{
+    text-align: center;
+}
+
